@@ -1,0 +1,3 @@
+[submodule "gitGraber"]
+	path = gitGraber
+	url = git@github.com:zvikam/gitGraber.git
