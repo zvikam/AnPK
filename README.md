@@ -4,12 +4,12 @@ unpack, decompile and analyze APK files
 currently only searches source code for interesting (...) tokens and strings.
 
 ### Execution
-docker run -it --rm -e TARGET_APK=<URL> zvikam/anpk
+    docker run -it --rm -e TARGET_APK=<URL> zvikam/anpk
 
 ### Arguments
 Arguments are passed as environment variables to the docker container.
 
-* DECOMPILER_TOOL = *jadx* | *apktool* (default = jadx)
+* DECOMPILER_TOOL = *jadx* | *apktool* (default = *jadx*)
 * DECOMPILER_OPTS = \<any options acceptable by the chosen decompiler. passed as-is\>
 * WORKER_THREADS = n (default = 1)
 * GRABER_OPTS = \<command line arguments passed to fileGraber\>
@@ -32,6 +32,6 @@ A target APK can be specified in several ways
 
         docker run ... -v /local/path:/container/path -e TARGET_APK=/container/path/to/apk ...
 
-* map the file directly as /input/target
+* map the file directly as `/input/target`
 
         docker run ... -v /local/path/apk:/input/target ...
